@@ -1,0 +1,12 @@
+#!/data/data/com.termux/files/usr/bin/bash
+clear
+
+echo "Please Input"
+read -p "Domain: " domain
+data=./result/$domain/$domain
+
+./bin/subfinder -d $domain -o $data.lst -all
+
+echo ""
+echo "========="
+echo "Check $data.lst for any result"

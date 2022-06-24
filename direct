@@ -1,0 +1,12 @@
+#!/data/data/com.termux/files/usr/bin/bash
+clear
+
+echo "Please Input"
+read -p "Domain:" domain
+data=./result/$domain/$domain
+
+./bin/bugscanner-go scan direct -f $data.lst -o $data.bug
+
+echo ""
+echo "========="
+echo "Check $data.bug for any result."
