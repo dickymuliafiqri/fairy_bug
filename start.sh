@@ -78,7 +78,7 @@ function direct_scan() {
 function cdn_ssl_scan() {
     clear
     ~/go/bin/bugscanner-go scan cdn-ssl --proxy-filename $output_dir.bug --target $host -o $output_dir.cdn
-    
+
     echo ""
     echo "========="
     echo "Hasil disimpan di $output_dir.cdn"
@@ -121,20 +121,20 @@ function menu() {
 
     if [[ $input -eq 0 ]]; then
         init
-    else if [[ $input -eq 1 ]]; then
+    elif [[ $input -eq 1 ]]; then
         input_domain
-    else if [[ $input -eq 2 ]]; then
+    elif [[ $input -eq 2 ]]; then
         input_host
-    else if [[ $input -eq 3 ]]; then
+    elif [[ $input -eq 3 ]]; then
         subdomain_finder
-    else if [[ $input -eq 4 ]]; then
+    elif [[ $input -eq 4 ]]; then
         direct_scan
-    else if [[ $input -eq 5 ]]; then
+    elif [[ $input -eq 5 ]]; then
         cdn_ssl_scan
-    else if [[ $input -eq 6 ]]; then
+    elif [[ $input -eq 6 ]]; then
         sni_scan
     else
-        exit 0
+        exit
     fi;
 }
 
