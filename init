@@ -1,0 +1,13 @@
+#!/data/data/com.termux/files/usr/bin/bash
+clear
+
+mkdir ./result
+chmod +x ./cdn-ssl-finder
+chmod +x ./direct
+chmod +x ./sni-finder
+chmod +x ./sub-finder
+
+apt update
+apt install golang -y
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+go install -v github.com/aztecrabbit/bugscanner-go@latest

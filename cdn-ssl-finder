@@ -6,7 +6,7 @@ read -p "Domain :" domain
 read -p "Host   : " host
 data=./result/$domain/$domain
 
-./bin/bugscanner-go scan cdn-ssl --proxy-filename $data.bug --target $host -o $data.cdn
+~/go/bin/bugscanner-go scan cdn-ssl --proxy-filename $data.bug --target $host -o $data.cdn
 
 echo "========="
 echo "Check $data.cdn for any result."

@@ -5,7 +5,7 @@ echo "Please Input"
 read -p "Domain:" domain
 data=./result/$domain/$domain
 
-./bin/bugscanner-go scan direct -f $data.lst -o $data.bug
+~/go/bin/bugscanner-go scan direct -f $data.lst -o $data.bug
 
 echo ""
 echo "========="

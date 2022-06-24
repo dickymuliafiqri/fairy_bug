@@ -5,7 +5,7 @@ echo "Please Input"
 read -p "Domain: " domain
 data=./result/$domain/$domain
 
-./bin/subfinder -d $domain -o $data.lst -all
+~/go/bin/subfinder -d $domain -o $data.lst -all
 
 echo ""
 echo "========="
