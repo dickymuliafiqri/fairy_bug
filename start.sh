@@ -13,6 +13,7 @@ function banner() {
     echo ""
     echo "Domain  : $domain"
     echo "Host    : $host"
+    echo "Output  : $output_dir"
     echo ""
 }
 
